@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px;
+}
+
+.mat-radio-button~.mat-radio-button {
+  margin-left: 16px;
+}
+
+.file-input {
+  display: none;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+}
+
+.file-upload {
+  padding-bottom: 25px;
+}
+
+.upload-btn {
+  margin-right: 15px;
+}
+
+.submit-button {
+  text-align: center;
+}
+
+mat-card-title {
+  padding-bottom: 25px;
+}

@@ -1,0 +1,33 @@
+<div>
+  <mat-card>
+    <mat-card-title>Lesson Plan Upload</mat-card-title>
+    <mat-card-content>
+      <form novalidate [formGroup]="lessonPlanUploadForm" (ngSubmit)="onSubmit()">
+
+        <div class="radio-group">
+          <label>Pick a Site</label>
+          <mat-radio-group aria-label="Select an Site option" formControlName="site">
+            <mat-radio-button value="reading">Reading</mat-radio-button>
+            <mat-radio-button value="writing">Writing</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <input type="file" class="file-input" [accept]="requiredFileType" (change)="onFileSelected($event)" #fileUpload>
+
+        <div class="file-upload">
+          <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+            <mat-icon>attach_file</mat-icon>
+          </button>
+
+          {{fileName || "No file uploaded yet."}}
+        </div>
+
+        <div class="submit-button">
+          <button mat-raised-button color="primary" [disabled]="!lessonPlanUploadForm.valid">Upload File</button>
+        </div>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+</div>
